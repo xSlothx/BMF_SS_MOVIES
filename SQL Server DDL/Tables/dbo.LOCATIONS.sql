@@ -1,0 +1,15 @@
+SET ANSI_NULLS ON
+SET QUOTED_IDENTIFIER ON
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[LOCATIONS] (
+		[LOCATION_ID]        [decimal](4, 0) NOT NULL,
+		[STREET_ADDRESS]     [varchar](40) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+		[POSTAL_CODE]        [varchar](12) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+		[CITY]               [varchar](30) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
+		[STATE_PROVINCE]     [varchar](25) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+		[COUNTRY_ID]         [char](2) COLLATE SQL_Latin1_General_CP1_CI_AS NULL
+)
+GO
+ALTER TABLE [dbo].[LOCATIONS] SET (LOCK_ESCALATION = TABLE)
+GO
